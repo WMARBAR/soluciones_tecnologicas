@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUESTROS CLIENTES</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='guyfox.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles-media.css') }}" media="screen and (max-width: 767px)">
+</head>
+<body>
+    <!-- Banner con menú integrado -->
+    <header class="banner">
+        <div class="banner-content">
+            <h1 class="banner-title">SOLUCIONES TECNOLÓGICAS</h1>
+            <nav class="banner-menu">
+                <button class="menu-button" onclick="location.href='/'">Home</button>
+                <button class="menu-button" onclick="location.href='/quienesSomos'">Quiénes Somos</button>
+                <button class="menu-button" onclick="location.href='/resenas'">Nuestros Clientes</button>
+            </nav>
+        </div>
+        <img src="{{ url_for('static', filename='logoST.png') }}" alt="Logo" class="banner-image">
+    </header>
+
+    <!-- Título principal -->
+    <div class="menu-container">
+        <h1 class="menu-title">NUESTROS CLIENTES</h1>
+    </div>
+
+    <!-- Sección descriptiva -->
+    <section class="info-section">
+        <h2 class="info-title">Piel Sana IGC</h2>
+        <p class="info-text">
+            En Soluciones Tecnológicas creemos que el conocimiento es el motor del cambio. Somos una organización interdisciplinaria compuesta por desarrolladores, analistas, diseñadores y estrategas. Nuestra misión es clara: traducir ideas en sistemas funcionales que mejoren vidas, procesos y decisiones. Diseñamos, desarrollamos y desplegamos soluciones que marcan la diferencia.
+        </p>
+    </section>
+</body>
+</html>

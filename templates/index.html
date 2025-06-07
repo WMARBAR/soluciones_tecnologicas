@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOLUCIONES TECNOLÓGICAS</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='guyfox.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles-media.css') }}" media="screen and (max-width: 767px)">
+</head>
+<body>
+    <!-- Banner con menú integrado -->
+    <header class="banner">
+        <div class="banner-content">
+            <h1 class="banner-title">SOLUCIONES TECNOLÓGICAS</h1>
+            <nav class="banner-menu">
+                <button class="menu-button" onclick="location.href='/'">Home</button>
+                <button class="menu-button" onclick="location.href='/quienesSomos'">Quiénes Somos</button>
+                <button class="menu-button" onclick="location.href='/resenas'">Nuestros Clientes</button>
+            </nav>
+        </div>
+        <img src="{{ url_for('static', filename='logoST.png') }}" alt="Blog Logo" class="banner-image">
+    </header>
+
+    <!-- Contenido principal -->
+    <div class="menu-container">
+        <h1 class="menu-title">EN EL FUTURO DE HOY ¡TODO ES POSIBLE!</h1>
+    </div>
+
+    <!-- Nueva sección -->
+    <section class="info-section">
+        <h2 class="info-title">¿Qué somos capaces de hacer?</h2>
+        <p class="info-text">
+            Somos un equipo apasionado por la innovación. Desarrollamos soluciones tecnológicas a la medida de tus necesidades, 
+            desde software a medida y plataformas web, hasta automatización de procesos, sistemas inteligentes e integración IoT. 
+            Creemos que cada problema puede convertirse en una oportunidad cuando se combina conocimiento, creatividad y código.
+        </p>
+    </section>
+</body>
+</html>

@@ -1,0 +1,125 @@
+/* Fuente futurista */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/* Banner en azul rey */
+.banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #adb6ec; /* azul rey */
+    color: #002366;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.banner-title {
+    font-size: 42px;
+    font-weight: bold;
+    margin: 0;
+    text-align: right;
+    letter-spacing: 1px;
+}
+
+/* Imagen del logo */
+.banner-image {
+    height: 100px;
+    width: auto;
+    margin-left: 20px;
+}
+
+/* Menú */
+.banner-menu {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* Botones en azul pálido con hover azul metálico */
+.menu-button {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #ffffff; /* azul pálido */
+    color: #002366;
+    border: 2px solid #002366;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu-button:hover {
+    background-color: #1f3b78; /* azul metálico */
+    color: white;
+    border-color: #1f3b78;
+}
+
+.menu-container {
+    text-align: center;
+    margin-top: 160px;
+}
+
+.menu-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 64px;
+    color: #002366;
+    margin: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+/* Hace que el contenido sea scrolleable */
+body {
+    overflow-y: auto;
+}
+
+/* Nueva sección de texto */
+.info-section {
+    max-width: 900px;
+    padding: 40px 20px;
+    margin: 0 auto 80px auto;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #222;
+}
+.info-text {
+    font-family: 'Consolas', monospace;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #222;
+    text-align: justify;
+}
+
+
+.info-title {
+    font-size: 36px;
+    color: #002366;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
