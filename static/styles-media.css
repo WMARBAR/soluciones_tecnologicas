@@ -1,4 +1,6 @@
-/* Tipografía más compacta para móviles */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+/* General */
 body {
     font-family: 'Orbitron', sans-serif;
     margin: 0;
@@ -6,13 +8,17 @@ body {
     background-color: #f0f4f8;
     color: #333;
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
-/* Banner más delgado */
+/* Banner */
 .banner {
     flex-direction: column;
     align-items: center;
     padding: 15px 20px;
+    background-color: #adb6ec; /* azul rey */
+    color: #002366;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
@@ -23,14 +29,17 @@ body {
 .banner-title {
     font-size: 28px;
     margin-bottom: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
+/* Logo */
 .banner-image {
     height: 70px;
     margin: 10px 0 0 0;
 }
 
-/* Menú más compacto */
+/* Menú */
 .banner-menu {
     flex-direction: column;
     gap: 10px;
@@ -38,9 +47,22 @@ body {
 }
 
 .menu-button {
+    font-family: 'Orbitron', sans-serif;
     font-size: 16px;
     padding: 8px 16px;
     width: 90%;
+    background-color: #ffffff;
+    color: #002366;
+    border: 2px solid #002366;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu-button:hover {
+    background-color: #1f3b78;
+    color: white;
+    border-color: #1f3b78;
 }
 
 /* Título principal */
@@ -48,31 +70,48 @@ body {
     font-size: 36px;
     margin-top: 140px;
     padding: 0 10px;
+    text-align: center;
+    color: #002366;
+    font-family: 'Orbitron', sans-serif;
 }
 
-/* Sección descriptiva */
+/* Sección de texto */
 .info-section {
     padding: 20px;
     font-size: 16px;
+    color: #222;
+    text-align: justify;
 }
 
 .info-title {
     font-size: 24px;
+    text-align: center;
+    color: #002366;
+    font-weight: bold;
 }
 
-/* Bio de miembro */
+.info-text {
+    font-family: Consolas, monospace;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    color: #222;
+}
+
+/* Perfil de miembro */
 .member-profile {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: 30px;
+    margin: 30px 20px; /* ← Añadimos margen lateral */
 }
-
 .member-photo {
-    width: 160px;
-    height: 200px;
+    width: 180px;
+    height: 220px;
     object-fit: cover;
     object-position: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 15px;
 }
 
@@ -80,9 +119,14 @@ body {
     max-width: 90%;
     font-size: 14px;
     font-family: Consolas, monospace;
+    color: #222;
+    text-align: justify;
 }
 
 .member-name {
     font-size: 18px;
+    color: #002366;
     margin-bottom: 8px;
+    font-weight: bold;
+    font-family: Consolas, monospace;
 }
