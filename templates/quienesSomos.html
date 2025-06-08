@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" media="screen and (min-width: 768px)">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles-media.css') }}" media="screen and (max-width: 767px)">
 </head>
+
 <body>
     <!-- Banner con menú integrado -->
     <header class="banner">
@@ -34,5 +35,41 @@
             En Soluciones Tecnológicas creemos que el conocimiento es el motor del cambio. Somos una organización interdisciplinaria compuesta por desarrolladores, analistas, diseñadores y estrategas. Nuestra misión es clara: traducir ideas en sistemas funcionales que mejoren vidas, procesos y decisiones. Diseñamos, desarrollamos y desplegamos soluciones que marcan la diferencia.
         </p>
     </section>
+
+    <!-- Miembro del equipo -->
+    <div class="member-profile">
+        <img src="{{ url_for('static', filename='juli.jpeg') }}" alt="Foto del miembro" class="member-photo">
+        <div class="member-bio">
+            <h3 class="member-name">Julian Robles</h3>
+            <p>
+                Ingeniero Electrónico con experiencia en dirección de proyectos tecnológicos. Actualmente cursa una especialización en Gestión de Proyectos. Tiene conocimiento en normativas de licitación, contratación pública y legislación aplicada, lo que le permite liderar iniciativas con enfoque técnico y legal.
+            </p>
+        </div>
+    </div>
+
+        <!-- Miembro del equipo -->
+    <div class="member-profile">
+        <img src="{{ url_for('static', filename='mono.jpeg') }}" alt="Foto del miembro" class="member-photo">
+        <div class="member-bio">
+            <h3 class="member-name">Wilson Felipe Martínez Barrantes</h3>
+            <p>
+                Ingeniero Electrónico con más de diez años de experiencia en programación, análisis de datos y administración de Big Data. Especialista en desarrollo de soluciones desde el hardware hasta el software, incluyendo interfaces, aplicaciones web y sistemas inteligentes. Apasionado por Python y por crear tecnología funcional con propósito.
+            </p>
+        </div>
+    </div>
+
+        <!-- Miembro del equipo -->
+    <div class="member-profile">
+        <img src="{{ url_for('static', filename='Sergy.jpeg') }}" alt="Foto del miembro" class="member-photo">
+        <div class="member-bio">
+            <h3 class="member-name">Sergio Andrés Sanchez Cardenas</h3>
+            <p>
+               Ingeniero Electrónico con gran dominio en el diseño de circuitos y dispositivos electrónicos. También es programador versátil, capaz de integrar hardware y software en soluciones funcionales y robustas. Su enfoque combina precisión técnica con creatividad aplicada al desarrollo tecnológico.
+            </p>
+        </div>
+    </div>
+
+
+
 </body>
 </html>
