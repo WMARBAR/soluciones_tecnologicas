@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Soluciones Tecnológicas: expertos en desarrollo tecnológico, consultoría e implementación de sistemas innovadores.">
-    <title>NUESTROS CLIENTES</title>
+    <title>Demos - SOLUCIONES TECNOLÓGICAS</title>
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='icoST.ico') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" media="screen and (min-width: 768px)">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles-media.css') }}" media="screen and (max-width: 767px)">
 </head>
+
 <body>
     <!-- Banner con menú integrado -->
     <header class="banner">
@@ -26,24 +26,28 @@
 
     <!-- Título principal -->
     <div class="menu-container">
-        <h1 class="menu-title">NUESTROS CLIENTES</h1>
+        <h1 class="menu-title">EXPLORA NUESTROS DEMOS</h1>
     </div>
 
-    <!-- Sección descriptiva -->
+    <!-- Sección de demos -->
     <section class="info-section">
-        <h2 class="info-title">Piel Sana IGC</h2>
-
-    </section>
-    <!-- Sección descriptiva -->
-    <section class="info-section">
-        <h2 class="info-title">Notaria primera de Tunja</h2>
-
+        <h2 class="info-title">Aplicación de software: ST QuickExchange</h2>
+        <p class="info-text">
+            Conversor de monedas actualizado para Latinoamérica y principales divisas mundiales. Ideal para cotizaciones rápidas y confiables.
+        </p>
+        <button class="menu-button" onclick="location.href='/descargar-demo'">Descargar Demo</button>
     </section>
 
-    <!-- Sección descriptiva -->
+    <!-- Puedes duplicar esta sección para más demos -->
     <section class="info-section">
-        <h2 class="info-title">RMP Comunicaciones S.A.S</h2>
-
+        <h2 class="info-title">Página Web personalizada</h2>
+        <p class="info-text">
+            Este demo muestra un sitio web real desplegado en Render, para que veas cómo puede lucir una página moderna, responsiva y profesional adaptada a tus necesidades.
+        </p>
+        <a href="https://la-fraternidad-discreta.onrender.com/" target="_blank">
+            <button class="menu-button">Visitar Demo</button>
+        </a>
     </section>
+
 </body>
 </html>

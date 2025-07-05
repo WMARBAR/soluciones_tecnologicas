@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Soluciones Tecnológicas: expertos en desarrollo tecnológico, consultoría e implementación de sistemas innovadores.">
     <title>SOLUCIONES TECNOLÓGICAS</title>
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='guyfox.ico') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='icoST.ico') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" media="screen and (min-width: 768px)">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles-media.css') }}" media="screen and (max-width: 767px)">
 </head>
@@ -17,6 +18,7 @@
                 <button class="menu-button" onclick="location.href='/'">Home</button>
                 <button class="menu-button" onclick="location.href='/quienesSomos'">Quiénes Somos</button>
                 <button class="menu-button" onclick="location.href='/resenas'">Nuestros Clientes</button>
+                <button class="menu-button" onclick="location.href='/demos'">Explora Nuestros Demos</button>
             </nav>
         </div>
         <img src="{{ url_for('static', filename='logoST.png') }}" alt="Blog Logo" class="banner-image">
@@ -29,13 +31,28 @@
 
     <!-- Nueva sección -->
     <section class="info-section">
-        <h2 class="info-title">¿Qué somos capaces de hacer?</h2>
+        <h2 class="info-title">Misión</h2>
         
         <p class="info-text">
-En Soluciones Tecnológicas nos especializamos en automatizar procesos repetitivos, diseñar soluciones a medida y generar sistemas con capacidad analítica y de control. Desarrollamos software personalizado, aplicaciones web, robots inteligentes y sistemas de control eléctrico.
+            En Soluciones Tecnológicas, nos comprometemos a ofrecer soluciones innovadoras y de alta calidad en el sector tecnológico, mediante servicios integrales de consultoría, desarrollo, implementación, diseño y mantenimiento en ingeniería.
 
-        Aplicamos estándares internacionales como ISO 22301, ISO 13485 e ISO 9001, integrando calidad en cada solución. Combinamos programación, ingeniería electrónica y conocimiento normativo para construir tecnología con propósito real.
+            Actuamos como aliados estratégicos de nuestros clientes, brindando asesoría experta y un enfoque personalizado que responde a sus necesidades específicas, optimizando recursos y asegurando eficiencia operativa a largo plazo.
+
+            Nuestra visión es contribuir al desarrollo de infraestructuras sostenibles y al liderazgo tecnológico, impulsando la transformación digital y promoviendo una conectividad más amplia, inclusiva y accesible para todos.
+
         </p>
     </section>
+
+    <!-- Nueva sección -->
+    <section class="info-section">
+        <h2 class="info-title">Visión</h2>
+        
+        <p class="info-text">
+        En Soluciones Tecnológicas aspiramos a consolidarnos como referentes en el desarrollo de soluciones integrales que combinen software y hardware para resolver desafíos complejos. Nuestro propósito es conectar y transformar a nuestros clientes a través de servicios innovadores de consultoría, diseño, implementación, desarrollo, mantenimiento y tecnología de vanguardia.
+
+        Nos proyectamos como una empresa reconocida por su capacidad de ofrecer soluciones eficientes, sostenibles y adaptadas a las necesidades del entorno, impulsando el progreso tecnológico, el desarrollo de infraestructuras inteligentes y una conectividad global que mejore la calidad de vida y potencie la competitividad de empresas y comunidades.
+        </p>
+    </section>
+
 </body>
 </html>

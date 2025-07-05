@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Soluciones Tecnológicas: expertos en desarrollo tecnológico, consultoría e implementación de sistemas innovadores.">
     <title>¿Quiénes Somos?</title>
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='guyfox.ico') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='icoST.ico') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" media="screen and (min-width: 768px)">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles-media.css') }}" media="screen and (max-width: 767px)">
 </head>
@@ -18,6 +19,7 @@
                 <button class="menu-button" onclick="location.href='/'">Home</button>
                 <button class="menu-button" onclick="location.href='/quienesSomos'">Quiénes Somos</button>
                 <button class="menu-button" onclick="location.href='/resenas'">Nuestros Clientes</button>
+                <button class="menu-button" onclick="location.href='/demos'">Explora Nuestros Demos</button>
             </nav>
         </div>
         <img src="{{ url_for('static', filename='logoST.png') }}" alt="Logo" class="banner-image">
