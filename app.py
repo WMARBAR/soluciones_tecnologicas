@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from flask import send_file
 import os
 app = Flask(__name__)
 
@@ -15,6 +16,15 @@ def quienesSomos():
 def resenas():
     return render_template('resenas.html')  # reseñas.html
 
+@app.route('/demos')
+def demos():
+    return render_template('demos.html')
+
+
+@app.route('/descargar-demo')
+def descargar_demo():
+    # Cambia la ruta al archivo correcto que pusiste en tu carpeta static
+    return send_file("static/ST_QuickExchange_demo.rar", as_attachment=True)
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))  # Usa el puerto de Render o 5000 por defecto
