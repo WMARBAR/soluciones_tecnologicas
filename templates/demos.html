@@ -35,7 +35,11 @@
         <p class="info-text">
             Conversor de monedas actualizado para Latinoamérica y principales divisas mundiales. Ideal para cotizaciones rápidas y confiables.
         </p>
-        <button class="menu-button" onclick="location.href='/descargar-demo'">Descargar Demo</button>
+        <button id="descargarDemoBtn" class="menu-button">Descargar Demo</button>
+
+        <p class="info-text instructivo-demo">
+            Lo único que debes hacer es descomprimir el archivo en tu escritorio de Windows y ejecutar el archivo <strong>.exe</strong>. Este demo es un archivo seguro y 100% comprobado por nuestro equipo.
+        </p>
     </section>
 
     <!-- Puedes duplicar esta sección para más demos -->
@@ -48,6 +52,29 @@
             <button class="menu-button">Visitar Demo</button>
         </a>
     </section>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const downloadBtn = document.getElementById('descargarDemoBtn');
+
+            if (downloadBtn) {
+                downloadBtn.addEventListener('click', function(event) {
+                    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+                    if (isMobile) {
+                        event.preventDefault();
+                        alert("Este demo es exclusivo para computadoras con Windows 10 o superior. Por favor descarga el archivo desde un PC.");
+                    } else {
+                        // Si no es móvil, redirecciona manualmente
+                        window.location.href = '/descargar-demo';
+                    }
+                });
+            }
+        });
+    </script>
+
+
 
 </body>
 </html>

@@ -130,3 +130,14 @@ body {
     font-weight: bold;
     font-family: Consolas, monospace;
 }
+
+.instructivo-demo {
+    margin-top: 10px;
+    font-size: 0.9rem;          /* Un poquito más pequeño para pantallas pequeñas */
+    color: #00FF00;
+    background-color: black;
+    padding: 8px;               /* Ligeramente menos padding en móviles */
+    border-radius: 5px;
+    font-family: Consolas, monospace;
+    text-align: justify;
+}
