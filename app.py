@@ -21,6 +21,11 @@ def demos():
     return render_template('demos.html')
 
 
+@app.route('/rompe-ladrillos')
+def rompe_ladrillos():
+    return render_template('rompeladrillos.html')
+
+
 @app.route('/descargar-demo')
 def descargar_demo():
     # Cambia la ruta al archivo correcto que pusiste en tu carpeta static

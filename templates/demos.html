@@ -46,6 +46,17 @@
 
     <!-- Puedes duplicar esta sección para más demos -->
     <section class="info-section">
+        <h2 class="info-title">Página Web Notaria 1 de Tunja</h2>
+        <p class="info-text">
+            Página completa y funcional diseñada para la notaria 1 de Tunja.
+        </p>
+        <a href="https://notaria1detunja.com/" target="_blank">
+            <button class="menu-button">Visitar Página</button>
+        </a>
+    </section>
+
+    <!-- Puedes duplicar esta sección para más demos -->
+    <section class="info-section">
         <h2 class="info-title">Página Web personalizada</h2>
         <p class="info-text">
             Este demo muestra un sitio web real desplegado en Render, para que veas cómo puede lucir una página moderna, responsiva y profesional adaptada a tus necesidades.
@@ -55,27 +66,45 @@
         </a>
     </section>
 
+    <section class="info-section">
+        <h2 class="info-title">Juega nuestro demo</h2>
+        <p class="info-text">
+            ¡Pon a prueba tus reflejos con este mini juego clásico de rompe-ladrillos! Ideal para una pausa divertida.
+        </p>
+        <button id="jugarRompeLadrillos" class="menu-button">Jugar ahora</button>
+    </section>
+
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const downloadBtn = document.getElementById('descargarDemoBtn');
+            const juegaBtn = document.getElementById('jugarRompeLadrillos');
+
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
             if (downloadBtn) {
                 downloadBtn.addEventListener('click', function(event) {
-                    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-
                     if (isMobile) {
                         event.preventDefault();
                         alert("Este demo es exclusivo para computadoras con Windows 10 o superior. Por favor descarga el archivo desde un PC.");
                     } else {
-                        // Si no es móvil, redirecciona manualmente
                         window.location.href = '/descargar-demo';
+                    }
+                });
+            }
+
+            if (juegaBtn) {
+                juegaBtn.addEventListener('click', function(event) {
+                    if (isMobile) {
+                        event.preventDefault();
+                        alert("Este juego solo está disponible en computadores de escritorio. Intenta acceder desde un PC.");
+                    } else {
+                        window.location.href = '/rompe-ladrillos';
                     }
                 });
             }
         });
     </script>
-
 
 
 </body>
