@@ -44,6 +44,19 @@
         </p>
     </section>
 
+    <!-- Sección de demos -->
+    <section class="info-section">
+        <h2 class="info-title">Aplicación de software: ST efect_recorder</h2>
+        <p class="info-text">
+            Aplica efectos a la voz grabada.
+        </p>
+       <button id="descargarSTRecorder" class="menu-button">Descargar Demo</button>
+
+        <p class="info-text instructivo-demo">
+            Lo único que debes hacer es descomprimir el archivo en tu escritorio de Windows y ejecutar el archivo <strong>.exe</strong>. Este demo es un archivo seguro y 100% comprobado por nuestro equipo.
+        </p>
+    </section>
+
     <!-- Puedes duplicar esta sección para más demos -->
     <section class="info-section">
         <h2 class="info-title">Página Web Notaria 1 de Tunja</h2>
@@ -76,25 +89,25 @@
 
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const downloadBtn = document.getElementById('descargarDemoBtn');
+        document.addEventListener('DOMContentLoaded', function () {
+            const stRecorderBtn = document.getElementById('descargarSTRecorder');
             const juegaBtn = document.getElementById('jugarRompeLadrillos');
 
             const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-            if (downloadBtn) {
-                downloadBtn.addEventListener('click', function(event) {
+            if (stRecorderBtn) {
+                stRecorderBtn.addEventListener('click', function (event) {
                     if (isMobile) {
                         event.preventDefault();
                         alert("Este demo es exclusivo para computadoras con Windows 10 o superior. Por favor descarga el archivo desde un PC.");
                     } else {
-                        window.location.href = '/descargar-demo';
+                        window.location.href = "{{ url_for('static', filename='ST_efect_recorder.rar') }}";
                     }
                 });
             }
 
             if (juegaBtn) {
-                juegaBtn.addEventListener('click', function(event) {
+                juegaBtn.addEventListener('click', function (event) {
                     if (isMobile) {
                         event.preventDefault();
                         alert("Este juego solo está disponible en computadores de escritorio. Intenta acceder desde un PC.");
