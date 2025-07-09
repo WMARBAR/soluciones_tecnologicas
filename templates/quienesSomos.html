@@ -39,7 +39,9 @@
             En Soluciones Tecnológicas creemos que el conocimiento es el motor del cambio. Somos una organización interdisciplinaria compuesta por desarrolladores, analistas, diseñadores y estrategas. Nuestra misión es clara: traducir ideas en sistemas funcionales que mejoren vidas, procesos y decisiones. Diseñamos, desarrollamos y desplegamos soluciones que marcan la diferencia.
         </p>
     </section>
-
+    <div style="text-align: center; margin-top: 1.5rem;">
+    <button id="openPdfModal" class="menu-button">Ver Norma ISO 13485:2016</button>
+    </div>
     <!-- Miembro del equipo -->
     <div class="member-profile">
         <img src="{{ url_for('static', filename='jul.jpeg') }}" alt="Foto del miembro" class="member-photo">
@@ -72,6 +74,30 @@
             </p>
         </div>
     </div>
+    <!-- Modal PDF -->
+    <div id="pdfModal" class="modal">
+    <div class="modal-content-pdf">
+        <span class="close-pdf" id="closePdfModal">&times;</span>
+        <iframe src="{{ url_for('static', filename='13485_2016.pdf') }}" frameborder="0"></iframe>
+    </div>
+    </div>
+
+    <script>
+    document.getElementById("openPdfModal").addEventListener("click", function() {
+    document.getElementById("pdfModal").style.display = "block";
+    });
+
+    document.getElementById("closePdfModal").addEventListener("click", function() {
+    document.getElementById("pdfModal").style.display = "none";
+    });
+
+    window.addEventListener("click", function(e) {
+    const modal = document.getElementById("pdfModal");
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+    });
+    </script>
 
 
 
