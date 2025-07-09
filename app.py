@@ -31,6 +31,12 @@ def descargar_demo():
     # Cambia la ruta al archivo correcto que pusiste en tu carpeta static
     return send_file("static/ST_QuickExchange_demo.rar", as_attachment=True)
 
+
+@app.route("/ns")
+def nuestros_servicios():
+    return render_template("ns.html")
+
+
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))  # Usa el puerto de Render o 5000 por defecto
     app.run(debug=True, host='0.0.0.0', port=port)  # Cambia host a '0.0.0.0'

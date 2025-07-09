@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nuestros Servicios - Soluciones Tecnológicas. Descubre lo que ofrecemos.">
+    <title>Nuestros Servicios</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='icoST.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles-media.css') }}" media="screen and (max-width: 767px)">
+</head>
+
+<body>
+    <!-- Banner con menú integrado -->
+    <header class="banner">
+        <div class="banner-content">
+            <div class="scroll-wrapper">
+                <h1 class="banner-title scroll-text">SOLUCIONES TECNOLÓGICAS</h1>
+            </div>
+            <nav class="banner-menu">
+                <button class="menu-button" onclick="location.href='/'">Home</button>
+                <button class="menu-button" onclick="location.href='/quienesSomos'">Quiénes Somos</button>
+                <button class="menu-button" onclick="location.href='/ns'">Nuestros Servicios</button>
+                <button class="menu-button" onclick="location.href='/resenas'">Nuestros Clientes</button>
+                <button class="menu-button" onclick="location.href='/demos'">Explora Nuestros Demos</button>
+            </nav>
+        </div>
+        <img src="{{ url_for('static', filename='logoST.png') }}" alt="Logo" class="banner-image">
+    </header>
+
+    <!-- Título principal -->
+    <div class="menu-container">
+        <h1 class="menu-title">NUESTROS SERVICIOS</h1>
+    </div>
+
+    <!-- Sección de servicios -->
+    <section class="info-section">
+        <h2 class="info-title">¿Qué Ofrecemos?</h2>
+        <p class="info-text">
+            En Soluciones Tecnológicas desarrollamos herramientas a la medida de tus necesidades. Desde automatización de procesos y desarrollo de software hasta implementación de sistemas de gestión basados en normativas ISO, brindamos soluciones confiables y seguras.
+        </p>
+        <div style="text-align: center; margin-top: 1.5rem;">
+        <button id="openPdfModal" class="menu-button">Ver Norma ISO 13485:2016</button>
+        </div>
+        <ul class="info-list">
+            <li>✅ Automatización de procesos internos (ISO, ICONTEC)</li>
+            <li>✅ Desarrollo de sistemas administrativos y jurídicos</li>
+            <li>✅ Páginas web funcionales y seguras</li>
+            <li>✅ Aplicaciones con análisis de datos e inteligencia artificial</li>
+            <li>✅ Acompañamiento en licitaciones y cumplimiento normativo</li>
+            <li>✅ Asesoría técnica y legal interdisciplinaria</li>
+        </ul>
+    </section>
+    <!-- Modal PDF -->
+    <div id="pdfModal" class="modal">
+    <div class="modal-content-pdf">
+        <span class="close-pdf" id="closePdfModal">&times;</span>
+        <iframe src="{{ url_for('static', filename='13485_2016.pdf') }}" frameborder="0"></iframe>
+    </div>
+    </div>
+
+    <script>
+    document.getElementById("openPdfModal").addEventListener("click", function() {
+    document.getElementById("pdfModal").style.display = "block";
+    });
+
+    document.getElementById("closePdfModal").addEventListener("click", function() {
+    document.getElementById("pdfModal").style.display = "none";
+    });
+
+    window.addEventListener("click", function(e) {
+    const modal = document.getElementById("pdfModal");
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+    });
+    </script>
+
+
+</body>
+</html>
