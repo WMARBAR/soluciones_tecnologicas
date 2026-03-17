@@ -3,79 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Soluciones Tecnológicas: expertos en desarrollo tecnológico, consultoría e implementación de sistemas innovadores.">
-    <title>¿Quiénes Somos?</title>
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='icoST.ico') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" media="screen and (min-width: 768px)">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles-media.css') }}" media="screen and (max-width: 767px)">
+    <title>Sobre Nosotros - Datslabs</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles-media.css') }}">
 </head>
-
 <body>
-    <!-- Banner con menú integrado -->
-    <header class="banner">
-        <div class="banner-content">
-            <div class="scroll-wrapper">
-                <h1 class="banner-title scroll-text">SOLUCIONES TECNOLÓGICAS</h1>
-            </div>
-            <nav class="banner-menu">
-                <button class="menu-button" onclick="location.href='/'">Home</button>
-                <button class="menu-button" onclick="location.href='/quienesSomos'">Quiénes Somos</button>
-                <button class="menu-button" onclick="location.href='/ns'">Nuestros Servicios</button>
-                <button class="menu-button" onclick="location.href='/resenas'">Nuestros Clientes</button>
-                <button class="menu-button" onclick="location.href='/demos'">Explora Nuestros Demos</button>
-            </nav>
+
+    <!-- HERO -->
+    <section class="about-hero">
+
+        <div class="grid-bg"></div>
+        <div class="glow"></div>
+
+        <div class="about-content">
+
+            <img src="{{ url_for('static', filename='img/logoDATSLABS_notcover.png') }}" class="logo-about">
+
+            <h1>Data Stellar Labs</h1>
+
+            <p class="about-subtitle">
+                Engineering intelligent systems for the future
+            </p>
+
         </div>
-        <img src="{{ url_for('static', filename='logoST.png') }}" alt="Logo" class="banner-image">
-    </header>
 
-    <!-- Título principal -->
-    <div class="menu-container">
-        <h1 class="menu-title">¿QUIÉNES SOMOS?</h1>
-    </div>
+    </section>
 
-    <!-- Sección descriptiva -->
-    <section class="info-section">
-        <h2 class="info-title">Nuestro Propósito</h2>
-        <p class="info-text">
-            En Soluciones Tecnológicas creemos que el conocimiento es el motor del cambio. Somos una organización interdisciplinaria compuesta por desarrolladores, analistas, diseñadores y estrategas. Nuestra misión es clara: traducir ideas en sistemas funcionales que mejoren vidas, procesos y decisiones. Diseñamos, desarrollamos y desplegamos soluciones que marcan la diferencia.
+    <!-- DESCRIPCIÓN -->
+    <section class="about-main">
+        <p>
+            En <strong>Data Stellar Labs S.A.S</strong> desarrollamos soluciones tecnológicas 
+            enfocadas en inteligencia artificial, analítica avanzada y automatización. 
+            Transformamos datos en decisiones estratégicas que generan impacto real en las organizaciones.
         </p>
     </section>
 
-    <!-- Miembro del equipo -->
-    <div class="member-profile">
-        <img src="{{ url_for('static', filename='jul.jpeg') }}" alt="Foto del miembro" class="member-photo">
-        <div class="member-bio">
-            <h3 class="member-name">Julian David Robles Farias</h3>
+    <!-- DATOS EMPRESA -->
+    <section class="company-data">
+
+        <h2>Información Legal</h2>
+
+        <div class="data-grid">
+
+            <div class="data-item">
+                <span>NIT</span>
+                <p>902046959 - 8</p>
+            </div>
+
+            <div class="data-item">
+                <span>Categoría</span>
+                <p>Sociedad jurídica principal</p>
+            </div>
+
+            <div class="data-item">
+                <span>Tipo de Sociedad</span>
+                <p>Sociedad comercial</p>
+            </div>
+
+            <div class="data-item">
+                <span>Organización</span>
+                <p>S.A.S</p>
+            </div>
+
+            <div class="data-item">
+                <span>Cámara de Comercio</span>
+                <p>Bogotá</p>
+            </div>
+
+            <div class="data-item">
+                <span>Matrícula</span>
+                <p>4077487</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- MISIÓN Y VISIÓN -->
+    <section class="about-section">
+
+        <div class="about-box">
+            <h2>Misión</h2>
             <p>
-                Ingeniero Electrónico con experiencia en dirección de proyectos tecnológicos. Actualmente cursa una especialización en Gestión de Proyectos. Tiene conocimiento en normativas de licitación, contratación pública y legislación aplicada, lo que le permite liderar iniciativas con enfoque técnico y legal.
+                Desarrollar soluciones tecnológicas innovadoras basadas en inteligencia artificial, 
+                analítica de datos y automatización, que permitan a las organizaciones optimizar sus 
+                procesos, mejorar la toma de decisiones y generar valor sostenible en entornos digitales.
             </p>
         </div>
-    </div>
 
-        <!-- Miembro del equipo -->
-    <div class="member-profile">
-        <img src="{{ url_for('static', filename='mono.jpeg') }}" alt="Foto del miembro" class="member-photo">
-        <div class="member-bio">
-            <h3 class="member-name">Wilson Felipe Martínez Barrantes</h3>
+        <div class="about-box">
+            <h2>Visión</h2>
             <p>
-                Ingeniero Electrónico con más de diez años de experiencia en programación, análisis de datos y administración de Big Data. Especialista en desarrollo de soluciones desde el hardware hasta el software, incluyendo interfaces, aplicaciones web y sistemas inteligentes. Apasionado por Python y por crear tecnología funcional con propósito.
+                Ser una empresa líder en Latinoamérica en el desarrollo de sistemas inteligentes, 
+                reconocida por su capacidad de innovación, calidad técnica y contribución a la 
+                transformación digital de empresas en distintos sectores.
             </p>
         </div>
-    </div>
 
-        <!-- Miembro del equipo -->
-    <div class="member-profile">
-        <img src="{{ url_for('static', filename='Sergy.jpeg') }}" alt="Foto del miembro" class="member-photo">
-        <div class="member-bio">
-            <h3 class="member-name">Sergio Andrés Sanchez Cardenas</h3>
+        <div class="about-box">
+            <h2>ADN Datslabs</h2>
             <p>
-               Ingeniero Electrónico con gran dominio en el diseño de circuitos y dispositivos electrónicos. También es programador versátil, capaz de integrar hardware y software en soluciones funcionales y robustas. Su enfoque combina precisión técnica con creatividad aplicada al desarrollo tecnológico.
+                Ingeniería, precisión, innovación y una mentalidad orientada a resultados. 
+                Construimos tecnología con propósito, enfocada en resolver problemas reales.
             </p>
         </div>
-    </div>
 
-
-
+    </section>
 
 </body>
 </html>
