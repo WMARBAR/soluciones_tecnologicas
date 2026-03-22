@@ -3,48 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nosotros - Datslabs</title>
+    <title>Quiénes Somos - Datslabs</title>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles-media.css') }}">
 </head>
 <body>
 
-    <!-- HERO -->
-    <section class="about-hero">
+    <header class="topbar">
+        <div class="navbar">
+            <a href="{{ url_for('home') }}" class="brand">
+                <img src="{{ url_for('static', filename='img/logoDATSLABS_notcover.png') }}" alt="Logo Datslabs" class="brand-logo">
+                <span>Datslabs S.A.S</span>
+            </a>
 
+            <ul>
+                <li><a href="{{ url_for('home') }}">Inicio</a></li>
+                <li><a href="{{ url_for('quienes_somos') }}">Quiénes somos</a></li>
+                <li><a href="{{ url_for('servicios') }}">Servicios</a></li>
+                <li><a href="{{ url_for('clientes') }}">Clientes</a></li>
+                <li><a href="{{ url_for('demos') }}">Demos</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="about-hero">
         <div class="grid-bg"></div>
         <div class="glow"></div>
 
         <div class="about-content">
-
-            <img src="{{ url_for('static', filename='img/logoDATSLABS_notcover.png') }}" class="logo-about">
+            <img src="{{ url_for('static', filename='img/logoDATSLABS_notcover.png') }}" class="logo-about" alt="Logo Datslabs">
 
             <h1>Data Stellar Labs</h1>
 
             <p class="about-subtitle">
-                Engineering intelligent systems for the future
+                Ingeniería inteligente para un mercado que exige más
             </p>
-
         </div>
-
     </section>
 
-    <!-- DESCRIPCIÓN -->
     <section class="about-main">
         <p>
-            En <strong>Data Stellar Labs S.A.S</strong> desarrollamos soluciones tecnológicas 
-            enfocadas en inteligencia artificial, analítica avanzada y automatización. 
-            Transformamos datos en decisiones estratégicas que generan impacto real en las organizaciones.
+            En <strong>Datslabs S.A.S</strong> desarrollamos soluciones tecnológicas con enfoque empresarial, visión futurista y capacidad real de ejecución. Integramos desarrollo web, automatización, inteligencia artificial, analítica y diseño estratégico para ayudar a las organizaciones a competir con mayor fuerza en el entorno digital colombiano.
         </p>
     </section>
 
-    <!-- DATOS EMPRESA -->
     <section class="company-data">
-
         <h2>Información Legal</h2>
 
         <div class="data-grid">
+            <div class="data-item">
+                <span>Razón social</span>
+                <p>Datslabs S.A.S</p>
+            </div>
 
             <div class="data-item">
                 <span>NIT</span>
@@ -52,17 +63,12 @@
             </div>
 
             <div class="data-item">
-                <span>Categoría</span>
-                <p>Sociedad jurídica principal</p>
+                <span>Tipo societario</span>
+                <p>Sociedad por Acciones Simplificada</p>
             </div>
 
             <div class="data-item">
-                <span>Tipo de Sociedad</span>
-                <p>Sociedad comercial</p>
-            </div>
-
-            <div class="data-item">
-                <span>Organización</span>
+                <span>Organización jurídica</span>
                 <p>S.A.S</p>
             </div>
 
@@ -72,43 +78,54 @@
             </div>
 
             <div class="data-item">
-                <span>Matrícula</span>
+                <span>Matrícula mercantil</span>
                 <p>4077487</p>
             </div>
-
         </div>
-
     </section>
 
-    <!-- MISIÓN Y VISIÓN -->
     <section class="about-section">
-
         <div class="about-box">
             <h2>Misión</h2>
             <p>
-                Desarrollar soluciones tecnológicas innovadoras basadas en inteligencia artificial, 
-                analítica de datos y automatización, que permitan a las organizaciones optimizar sus 
-                procesos, mejorar la toma de decisiones y generar valor sostenible en entornos digitales.
+                Desarrollar soluciones tecnológicas innovadoras que permitan a empresas y organizaciones optimizar procesos, fortalecer su posicionamiento y tomar decisiones más inteligentes mediante software, automatización, analítica y transformación digital.
             </p>
         </div>
 
         <div class="about-box">
             <h2>Visión</h2>
             <p>
-                Ser una empresa líder en Latinoamérica en el desarrollo de sistemas inteligentes, 
-                reconocida por su capacidad de innovación, calidad técnica y contribución a la 
-                transformación digital de empresas en distintos sectores.
+                Ser una compañía referente en Colombia y Latinoamérica por su capacidad de crear ecosistemas tecnológicos confiables, modernos y escalables, con alto valor empresarial y enfoque en resultados medibles.
             </p>
         </div>
 
         <div class="about-box">
             <h2>ADN Datslabs</h2>
             <p>
-                Ingeniería, precisión, innovación y una mentalidad orientada a resultados. 
-                Construimos tecnología con propósito, enfocada en resolver problemas reales.
+                Precisión técnica, pensamiento estratégico, estética futurista y soluciones construidas para resolver problemas reales con impacto comercial.
             </p>
         </div>
 
+        <div class="about-box">
+            <h2>Valores</h2>
+            <p>
+                Innovación, responsabilidad, claridad, cumplimiento, diseño inteligente y compromiso con la mejora continua en cada proyecto.
+            </p>
+        </div>
+
+        <div class="about-box">
+            <h2>Propuesta de valor</h2>
+            <p>
+                No solo desarrollamos tecnología: construimos presencia digital, estructura comercial y confianza de marca para competir de verdad.
+            </p>
+        </div>
+
+        <div class="about-box">
+            <h2>Enfoque de mercado</h2>
+            <p>
+                Diseñamos activos digitales con lenguaje corporativo, impacto visual y orientación directa al mercado colombiano actual.
+            </p>
+        </div>
     </section>
 
 </body>

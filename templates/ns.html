@@ -3,88 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nuestros Servicios - Soluciones Tecnológicas. Descubre lo que ofrecemos.">
-    <title>Nuestros Servicios</title>
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='icoST.ico') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" media="screen and (min-width: 768px)">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles-media.css') }}" media="screen and (max-width: 767px)">
-</head>
+    <title>Servicios - Datslabs</title>
+    <meta name="description" content="Servicios de Datslabs: desarrollo web, chatbots, automatización, software a medida, analítica e inteligencia artificial.">
 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles-media.css') }}">
+</head>
 <body>
-    <!-- Banner con menú integrado -->
-    <header class="banner">
-        <div class="banner-content">
-            <div class="scroll-wrapper">
-                <h1 class="banner-title scroll-text">SOLUCIONES TECNOLÓGICAS</h1>
-            </div>
-            <nav class="banner-menu">
-                <button class="menu-button" onclick="location.href='/'">Home</button>
-                <button class="menu-button" onclick="location.href='/quienesSomos'">Quiénes Somos</button>
-                <button class="menu-button" onclick="location.href='/ns'">Nuestros Servicios</button>
-                <button class="menu-button" onclick="location.href='/resenas'">Nuestros Clientes</button>
-                <button class="menu-button" onclick="location.href='/demos'">Explora Nuestros Demos</button>
-            </nav>
+
+    <header class="topbar">
+        <div class="navbar">
+            <a href="{{ url_for('home') }}" class="brand">
+                <img src="{{ url_for('static', filename='img/logoDATSLABS_notcover.png') }}" alt="Logo Datslabs" class="brand-logo">
+                <span>Datslabs S.A.S</span>
+            </a>
+
+            <ul>
+                <li><a href="{{ url_for('home') }}">Inicio</a></li>
+                <li><a href="{{ url_for('quienes_somos') }}">Quiénes somos</a></li>
+                <li><a href="{{ url_for('servicios') }}">Servicios</a></li>
+                <li><a href="{{ url_for('clientes') }}">Clientes</a></li>
+                <li><a href="{{ url_for('demos') }}">Demos</a></li>
+            </ul>
         </div>
-        <img src="{{ url_for('static', filename='logoST.png') }}" alt="Logo" class="banner-image">
     </header>
 
-    <!-- Título principal -->
-    <div class="menu-container">
-        <h1 class="menu-title">NUESTROS SERVICIOS</h1>
-    </div>
+    <section class="about-hero">
+        <div class="grid-bg"></div>
+        <div class="glow"></div>
 
-    <!-- Sección de servicios -->
-    <section class="info-section">
-        <h2 class="info-title">¿Qué Ofrecemos?</h2>
-        <p class="info-text">
-            En Soluciones Tecnológicas desarrollamos herramientas a la medida de tus necesidades. Desde automatización de procesos y desarrollo de software hasta implementación de sistemas de gestión basados en normativas ISO, brindamos soluciones confiables y seguras.
-        </p>
-        <div style="text-align: center; margin-top: 1.5rem;">
-        <button id="openPdfModal" class="menu-button">Ver Norma ISO 13485:2016</button>
+        <div class="about-content">
+            <h1>Nuestros Servicios</h1>
+            <p class="about-subtitle">Tecnología pensada para posicionar, automatizar y vender</p>
         </div>
-        <ul class="info-list">
-            <li>✅ Automatización de procesos internos (ISO, ICONTEC)</li>
-            <li>✅ Desarrollo de sistemas administrativos y jurídicos</li>
-            <li>✅ Páginas web funcionales y seguras</li>
-            <li>✅ Aplicaciones con análisis de datos e inteligencia artificial</li>
-            <li>✅ Acompañamiento en licitaciones y cumplimiento normativo</li>
-            <li>✅ Asesoría técnica y legal interdisciplinaria</li>
-        </ul>
-        <!-- Botones extra debajo del checklist -->
-        <div style="text-align: center; margin-top: 2rem;">
-            <a href="{{ url_for('static', filename='CrisisProof ISO 22301.pdf') }}" target="_blank">
-                <button class="menu-button">Servicio de Auditoría</button>
-            </a><a href="{{ url_for('static', filename='Web Corporativa Premium.pdf') }}" target="_blank">
-                <button class="menu-button">Servicio de Diseño</button>
-            </a>
-        </div>
-
     </section>
-    <!-- Modal PDF -->
-    <div id="pdfModal" class="modal">
-    <div class="modal-content-pdf">
-        <span class="close-pdf" id="closePdfModal">&times;</span>
-        <iframe src="{{ url_for('static', filename='13485_2016.pdf') }}" frameborder="0"></iframe>
-    </div>
-    </div>
 
-    <script>
-    document.getElementById("openPdfModal").addEventListener("click", function() {
-    document.getElementById("pdfModal").style.display = "block";
-    });
+    <section class="about-main">
+        <p>
+            En Datslabs presentamos soluciones tecnológicas con una visión clara: que cada desarrollo tenga valor comercial, presencia corporativa y capacidad real de mejora dentro de la operación del cliente.
+        </p>
+    </section>
 
-    document.getElementById("closePdfModal").addEventListener("click", function() {
-    document.getElementById("pdfModal").style.display = "none";
-    });
+    <section class="future">
+        <h2>Oferta Tecnológica</h2>
 
-    window.addEventListener("click", function(e) {
-    const modal = document.getElementById("pdfModal");
-    if (e.target === modal) {
-        modal.style.display = "none";
-    }
-    });
-    </script>
+        <div class="cards">
+            <div class="card">
+                <span>01</span>
+                <h3>Desarrollo de Páginas Web</h3>
+                <p>Sitios corporativos, landing pages y plataformas visualmente potentes, rápidas y orientadas a conversión.</p>
+            </div>
 
+            <div class="card">
+                <span>02</span>
+                <h3>Software a la Medida</h3>
+                <p>Soluciones empresariales personalizadas para automatizar procesos, seguimiento, control y operación.</p>
+            </div>
+
+            <div class="card">
+                <span>03</span>
+                <h3>Chatbots & Asistencia Digital</h3>
+                <p>Implementación de chatbots para atención inicial, filtrado de requerimientos y acompañamiento comercial.</p>
+            </div>
+
+            <div class="card">
+                <span>04</span>
+                <h3>Inteligencia Artificial</h3>
+                <p>Integración de modelos analíticos e inteligencia aplicada para optimizar decisiones y tareas repetitivas.</p>
+            </div>
+
+            <div class="card">
+                <span>05</span>
+                <h3>Analítica & Visualización</h3>
+                <p>Dashboards, interpretación de datos y tableros estratégicos para control gerencial y seguimiento.</p>
+            </div>
+
+            <div class="card">
+                <span>06</span>
+                <h3>Mejorabilidad Empresarial</h3>
+                <p>Diseño de soluciones que aumentan eficiencia, fortalecen imagen de marca y elevan capacidad competitiva.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="company-data">
+        <h2>¿Por qué elegirnos?</h2>
+
+        <div class="data-grid">
+            <div class="data-item">
+                <span>Enfoque</span>
+                <p>Diseño + negocio + tecnología</p>
+            </div>
+
+            <div class="data-item">
+                <span>Diferencial</span>
+                <p>Imagen futurista y discurso corporativo</p>
+            </div>
+
+            <div class="data-item">
+                <span>Resultado</span>
+                <p>Mayor presencia, confianza y orden digital</p>
+            </div>
+
+            <div class="data-item">
+                <span>Mercado</span>
+                <p>Orientado a empresas colombianas</p>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>

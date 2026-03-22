@@ -3,55 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Soluciones Tecnológicas: expertos en desarrollo tecnológico, consultoría e implementación de sistemas innovadores.">
-    <title>NUESTROS CLIENTES</title>
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='icoST.ico') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" media="screen and (min-width: 768px)">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles-media.css') }}" media="screen and (max-width: 767px)">
+    <title>Clientes - Datslabs</title>
+    <meta name="description" content="Clientes y casos de referencia de Datslabs S.A.S.">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles-media.css') }}">
 </head>
 <body>
-    <!-- Banner con menú integrado -->
-    <header class="banner">
-        <div class="banner-content">
-            <div class="scroll-wrapper">
-                <h1 class="banner-title scroll-text">SOLUCIONES TECNOLÓGICAS</h1>
-            </div>
-            <nav class="banner-menu">
-                <button class="menu-button" onclick="location.href='/'">Home</button>
-                <button class="menu-button" onclick="location.href='/quienesSomos'">Quiénes Somos</button>
-                <button class="menu-button" onclick="location.href='/ns'">Nuestros Servicios</button>
-                <button class="menu-button" onclick="location.href='/resenas'">Nuestros Clientes</button>
-                <button class="menu-button" onclick="location.href='/demos'">Explora Nuestros Demos</button>
-            </nav>
+
+    <header class="topbar">
+        <div class="navbar">
+            <a href="{{ url_for('home') }}" class="brand">
+                <img src="{{ url_for('static', filename='img/logoDATSLABS_notcover.png') }}" alt="Logo Datslabs" class="brand-logo">
+                <span>Datslabs S.A.S</span>
+            </a>
+
+            <ul>
+                <li><a href="{{ url_for('home') }}">Inicio</a></li>
+                <li><a href="{{ url_for('quienes_somos') }}">Quiénes somos</a></li>
+                <li><a href="{{ url_for('servicios') }}">Servicios</a></li>
+                <li><a href="{{ url_for('clientes') }}">Clientes</a></li>
+                <li><a href="{{ url_for('demos') }}">Demos</a></li>
+            </ul>
         </div>
-        <img src="{{ url_for('static', filename='logoST.png') }}" alt="Logo" class="banner-image">
     </header>
 
-    <!-- Título principal -->
-    <div class="menu-container">
-        <h1 class="menu-title">NUESTROS CLIENTES</h1>
-    </div>
+    <section class="about-hero">
+        <div class="grid-bg"></div>
+        <div class="glow"></div>
 
-    <!-- Sección descriptiva -->
-    <section class="info-section">
-        <h2 class="info-title">Piel Sana IGC</h2>
-        <p class="info-description">Se desarrolló un software personalizado para optimizar el proceso de gestión de pacientes.</p>
+        <div class="about-content">
+            <h1>Nuestros Clientes</h1>
+            <p class="about-subtitle">Confianza construida con resultados</p>
+        </div>
     </section>
 
-    <!-- Sección descriptiva -->
-    <section class="info-section">
-        <a href="https://notaria1detunja.com/" target="_blank" style="text-decoration: none; color: inherit;">
-            <h2 class="info-title">Notaria primera de Tunja</h2>
-            <p class="info-description">Página WEB enfocada a promocionar servicios de la Notaria.</p>
-        </a>
+    <section class="future">
+        <h2>Casos de confianza</h2>
+
+        <div class="cards">
+            <div class="card">
+                <span>01</span>
+                <h3>Piel Sana IGC</h3>
+                <p>Desarrollo de software especializado para fortalecer la gestión de pacientes y mejorar la operación clínica.</p>
+            </div>
+
+            <div class="card">
+                <span>02</span>
+                <h3>Notaría Primera de Tunja</h3>
+                <p>Desarrollo web enfocado en visibilidad institucional, presentación de servicios y presencia digital profesional.</p>
+            </div>
+
+            <div class="card">
+                <span>03</span>
+                <h3>RMP Comunicaciones S.A.S</h3>
+                <p>Soporte tecnológico y acompañamiento en plataformas IT, con enfoque en continuidad y eficiencia operativa.</p>
+            </div>
+        </div>
     </section>
 
-
-    <!-- Sección descriptiva -->
-    <section class="info-section">
-        <h2 class="info-title">RMP Comunicaciones S.A.S</h2>
-        <p class="info-description">Soporte de plataformas de IT y mantenimiento de qeuipos.</p>
-
+    <section class="about-main">
+        <p>
+            Cada proyecto representa una oportunidad para demostrar que una solución tecnológica bien diseñada puede elevar la imagen de marca, ordenar procesos y abrir nuevas posibilidades de crecimiento.
+        </p>
     </section>
+
 </body>
 </html>

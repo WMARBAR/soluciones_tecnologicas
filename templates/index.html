@@ -3,71 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datslabs</title>
+    <title>Datslabs S.A.S</title>
+    <meta name="description" content="Datslabs S.A.S. Desarrollo web, inteligencia artificial, automatización, analítica y soluciones tecnológicas en Colombia.">
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles-media.css') }}">
 </head>
 <body>
 
-    <!-- HERO -->
-    <section class="hero">
+    <header class="topbar">
+        <div class="navbar">
+            <a href="{{ url_for('home') }}" class="brand">
+                <img src="{{ url_for('static', filename='img/logoDATSLABS_notcover.png') }}" alt="Logo Datslabs" class="brand-logo">
+                <span>Datslabs S.A.S</span>
+            </a>
 
-        <!-- Fondo -->
+            <ul>
+                <li><a href="{{ url_for('home') }}">Inicio</a></li>
+                <li><a href="{{ url_for('quienes_somos') }}">Quiénes somos</a></li>
+                <li><a href="{{ url_for('servicios') }}">Servicios</a></li>
+                <li><a href="{{ url_for('clientes') }}">Clientes</a></li>
+                <li><a href="{{ url_for('demos') }}">Demos</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero">
         <div class="grid-bg"></div>
         <div class="glow"></div>
 
-        <!-- CONTENIDO -->
         <div class="hero-content">
+            <div class="tagline">Tecnología de alto impacto para empresas competitivas</div>
 
-            <img src="{{ url_for('static', filename='img/logoDATSLABS_notcover.png') }}" class="logo-hero">
+            <img src="{{ url_for('static', filename='img/logoDATSLABS_notcover.png') }}" class="logo-hero" alt="Logo Datslabs">
 
             <h1>Datslabs S.A.S</h1>
 
             <p class="subtitle">
-                Data Intelligence · AI Systems · Digital Engineering
+                Desarrollo Web · Inteligencia Artificial · Analítica · Automatización · Soluciones Empresariales
+            </p>
+
+            <p class="hero-text">
+                Diseñamos ecosistemas digitales modernos para empresas colombianas que necesitan vender mejor, automatizar procesos y proyectar una imagen corporativa sólida, tecnológica y confiable.
             </p>
 
             <div class="buttons">
-                <a href="#" class="btn-primary">Explorar</a>
-
-                <!-- BOTÓN CORRECTO -->
-                <a href="{{ url_for('quienes_somos') }}" class="btn-outline">
-                    Sobre nosotros
-                </a>
+                <a href="{{ url_for('servicios') }}" class="btn-primary">Explorar servicios</a>
+                <a href="{{ url_for('quienes_somos') }}" class="btn-outline">Sobre nosotros</a>
             </div>
-
         </div>
-
     </section>
 
-    <!-- SECCION FUTURISTA -->
     <section class="future">
-
         <h2>We Build Intelligent Systems</h2>
 
         <div class="cards">
-
             <div class="card">
                 <span>01</span>
-                <h3>AI & Machine Learning</h3>
-                <p>Modelos predictivos y automatización avanzada.</p>
+                <h3>Desarrollo Web Corporativo</h3>
+                <p>Páginas modernas, veloces y persuasivas para fortalecer marca, credibilidad y captación comercial.</p>
             </div>
 
             <div class="card">
                 <span>02</span>
-                <h3>Data Engineering</h3>
-                <p>Arquitecturas robustas y pipelines escalables.</p>
+                <h3>AI & Automatización</h3>
+                <p>Automatizamos tareas, flujos de trabajo y asistencia digital con enfoque real en productividad.</p>
             </div>
 
             <div class="card">
                 <span>03</span>
-                <h3>Analytics</h3>
-                <p>Visualización y decisiones basadas en datos.</p>
+                <h3>Data & Analytics</h3>
+                <p>Transformamos datos en decisiones estratégicas con visualización, análisis y arquitectura escalable.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="future alt-section">
+        <h2>Valor que sí se siente en el mercado</h2>
+
+        <div class="cards">
+            <div class="card">
+                <span>04</span>
+                <h3>Oferta clara</h3>
+                <p>Presentamos tus servicios con lenguaje profesional, estructura comercial y enfoque competitivo.</p>
             </div>
 
-        </div>
+            <div class="card">
+                <span>05</span>
+                <h3>Tasa de mejorabilidad</h3>
+                <p>Diseñamos soluciones pensadas para optimizar conversión, presencia digital y procesos internos.</p>
+            </div>
 
+            <div class="card">
+                <span>06</span>
+                <h3>Imagen futurista</h3>
+                <p>Tu empresa comunica innovación, precisión y confianza desde el primer segundo.</p>
+            </div>
+        </div>
     </section>
 
 </body>
